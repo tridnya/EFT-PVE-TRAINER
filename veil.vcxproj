@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>18.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{2203f232-3d3d-476a-b858-147f677c2585}</ProjectGuid>
+    <RootNamespace>veil</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros">
+    <WebView2LoaderPreference>Static</WebView2LoaderPreference>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>C:\Battlestate Games\BsgLauncher</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;VEIL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)external;$(ProjectDir)external\imgui;$(ProjectDir)external\detours;$(ProjectDir)vendor\stb;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(ProjectDir)lib\d3dx11.lib;$(ProjectDir)lib\detours.lib;windowsapp.lib;windowscodecs.lib;winhttp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>if not exist "$(OutDir)assets\gif" mkdir "$(OutDir)assets\gif"
+copy /Y "$(ProjectDir)assets\gif\clawd-mini-idle.gif" "$(OutDir)assets\gif\clawd-mini-idle.gif"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;VEIL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)external;$(ProjectDir)external\imgui;$(ProjectDir)external\detours;$(ProjectDir)vendor\stb;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(ProjectDir)lib\d3dx11.lib;$(ProjectDir)lib\detours.lib;windowsapp.lib;windowscodecs.lib;winhttp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>if not exist "$(OutDir)assets\gif" mkdir "$(OutDir)assets\gif"
+copy /Y "$(ProjectDir)assets\gif\clawd-mini-idle.gif" "$(OutDir)assets\gif\clawd-mini-idle.gif"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="assets\item_catalog.cpp" />
+    <ClCompile Include="assets\item_database_export.cpp" />
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="external\imgui\imgui.cpp" />
+    <ClCompile Include="external\imgui\imgui_draw.cpp" />
+    <ClCompile Include="external\imgui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="external\imgui\imgui_impl_dx12.cpp" />
+    <ClCompile Include="external\imgui\imgui_impl_win32.cpp" />
+    <ClCompile Include="external\imgui\imgui_stdlib.cpp" />
+    <ClCompile Include="external\imgui\imgui_tables.cpp" />
+    <ClCompile Include="external\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="game\customization\outfit_controller.cpp" />
+    <ClCompile Include="gui\buddy\clawd_companion.cpp" />
+    <ClCompile Include="gui\dxhook\dxhook.cpp" />
+    <ClCompile Include="gui\media\media_widget.cpp" />
+    <ClCompile Include="gui\menu\menu.cpp" />
+    <ClCompile Include="gui\webview\tarkov_map_webview.cpp" />
+    <ClCompile Include="hooks\hooks.cpp" />
+    <ClCompile Include="module\item_factory_catalog.cpp" />
+    <ClCompile Include="module\impl\OutfitModule.cpp" />
+    <ClCompile Include="runtime\mcp\inspector_support.cpp" />
+    <ClCompile Include="runtime\mcp\memory_commands.cpp" />
+    <ClCompile Include="runtime\mcp\metadata_commands.cpp" />
+    <ClCompile Include="runtime\mcp\runtime_bridge.cpp" />
+    <ClCompile Include="runtime\mcp\runtime_inspector.cpp" />
+    <ClCompile Include="runtime\mcp\unity_commands.cpp" />
+    <ClCompile Include="util\logger.cpp" />
+    <ClCompile Include="vendor\stb\stb_image_impl.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="assets\item_catalog.h" />
+    <ClInclude Include="assets\item_database.h" />
+    <ClInclude Include="assets\item_database_export.h" />
+    <ClInclude Include="assets\weapon_finish_assets.h" />
+    <ClInclude Include="config\ActionRowValue.h" />
+    <ClInclude Include="config\CheckboxValue.h" />
+    <ClInclude Include="config\ColorpickerValue.h" />
+    <ClInclude Include="config\ConfigValue.h" />
+    <ClInclude Include="config\FavoritesValue.h" />
+    <ClInclude Include="config\FloatSliderValue.h" />
+    <ClInclude Include="config\IntSliderValue.h" />
+    <ClInclude Include="config\IntTextboxValue.h" />
+    <ClInclude Include="config\ItemSearchValue.h" />
+    <ClInclude Include="config\SelectValue.h" />
+    <ClInclude Include="config\TextboxValue.h" />
+    <ClInclude Include="external\detours\detours.h" />
+    <ClInclude Include="external\detours\detver.h" />
+    <ClInclude Include="external\imgui\imconfig.h" />
+    <ClInclude Include="external\imgui\imgui.h" />
+    <ClInclude Include="external\imgui\imgui_impl_dx11.h" />
+    <ClInclude Include="external\imgui\imgui_impl_dx12.h" />
+    <ClInclude Include="external\imgui\imgui_impl_win32.h" />
+    <ClInclude Include="external\imgui\imgui_internal.h" />
+    <ClInclude Include="external\imgui\imgui_stdlib.h" />
+    <ClInclude Include="external\imgui\imstb_rectpack.h" />
+    <ClInclude Include="external\imgui\imstb_textedit.h" />
+    <ClInclude Include="external\imgui\imstb_truetype.h" />
+    <ClInclude Include="game\customization\outfit_controller.h" />
+    <ClInclude Include="gui\buddy\clawd_companion.h" />
+    <ClInclude Include="gui\dxhook\dxhook.h" />
+    <ClInclude Include="gui\media\media_widget.h" />
+    <ClInclude Include="gui\menu\imgui_addons.h" />
+    <ClInclude Include="gui\menu\menu.h" />
+    <ClInclude Include="gui\menu\resources.h" />
+    <ClInclude Include="gui\webview\tarkov_map_webview.h" />
+    <ClInclude Include="hooks\hooks.h" />
+    <ClInclude Include="il2cpp\exports.h" />
+    <ClInclude Include="il2cpp\Il2CppObjectInstance.h" />
+    <ClInclude Include="il2cpp\il2cpp_offsets.h" />
+    <ClInclude Include="il2cpp\il2utils.h" />
+    <ClInclude Include="il2cpp\runtime_discovery.h" />
+    <ClInclude Include="il2cpp\libil2cpp\il2cpp-api-types.h" />
+    <ClInclude Include="il2cpp\libil2cpp\il2cpp-blob.h" />
+    <ClInclude Include="il2cpp\libil2cpp\il2cpp-class-internals.h" />
+    <ClInclude Include="il2cpp\libil2cpp\il2cpp-metadata.h" />
+    <ClInclude Include="il2cpp\libil2cpp\il2cpp-object-internals.h" />
+    <ClInclude Include="il2cpp\libil2cpp\il2cpp-runtime-metadata.h" />
+    <ClInclude Include="il2cpp\unity.h" />
+    <ClInclude Include="module\always_on.h" />
+    <ClInclude Include="module\common_hooks.h" />
+    <ClInclude Include="module\game_state.h" />
+    <ClInclude Include="module\impl\AssetDiscoveryModule.h" />
+    <ClInclude Include="module\impl\ConfigModule.h" />
+    <ClInclude Include="module\impl\CustomizationDiscoveryModule.h" />
+    <ClInclude Include="module\impl\HideoutModule.h" />
+    <ClInclude Include="module\impl\EntityVisualizerModule.h" />
+    <ClInclude Include="module\impl\ItemModule.h" />
+    <ClInclude Include="module\impl\MapModule.h" />
+    <ClInclude Include="module\impl\OutfitModule.h" />
+    <ClInclude Include="module\impl\PlayerModule.h" />
+    <ClInclude Include="module\impl\QuestModule.h" />
+    <ClInclude Include="module\impl\WatermarkModule.h" />
+    <ClInclude Include="module\impl\WeatherModule.h" />
+    <ClInclude Include="module\impl\WeaponModule.h" />
+    <ClInclude Include="module\impl\WorldVisualizerModule.h" />
+    <ClInclude Include="module\item_factory_catalog.h" />
+    <ClInclude Include="module\Module.h" />
+    <ClInclude Include="module\ModuleCategory.h" />
+    <ClInclude Include="module\ModuleManager.h" />
+    <ClInclude Include="runtime\mcp\inspector_support.h" />
+    <ClInclude Include="runtime\mcp\memory_commands.h" />
+    <ClInclude Include="runtime\mcp\metadata_commands.h" />
+    <ClInclude Include="runtime\mcp\protocol.h" />
+    <ClInclude Include="runtime\mcp\runtime_bridge.h" />
+    <ClInclude Include="runtime\mcp\runtime_inspector.h" />
+    <ClInclude Include="runtime\mcp\unity_commands.h" />
+    <ClInclude Include="util\globals.h" />
+    <ClInclude Include="util\hash.h" />
+    <ClInclude Include="util\logger.h" />
+    <ClInclude Include="util\scan.h" />
+    <ClInclude Include="util\utils.h" />
+    <ClInclude Include="vendor\stb\stb_image.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\gif\clawd-mini-idle.gif" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(ProjectDir)..\packages\Microsoft.Web.WebView2\1.0.4022.49\build\native\Microsoft.Web.WebView2.targets" Condition="Exists('$(ProjectDir)..\packages\Microsoft.Web.WebView2\1.0.4022.49\build\native\Microsoft.Web.WebView2.targets')" />
+  </ImportGroup>
+</Project>

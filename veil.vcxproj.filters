@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{99E93B20-6881-44E0-BE22-41F3DB0F0A52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game\Customization">
+      <UniqueIdentifier>{D4E4A969-F117-41AC-8A79-E090B2D933C0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Game\Customization">
+      <UniqueIdentifier>{468CD8B7-330C-4DD7-A9B4-47E5B7A7C213}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Modules">
+      <UniqueIdentifier>{7D1FBA6D-745A-4316-B31A-C04A69B54383}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Modules">
+      <UniqueIdentifier>{090F3D2D-D2DE-46E8-B10A-C7854E99832B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Runtime\MCP">
+      <UniqueIdentifier>{A44E9C2B-57CC-4F21-B44C-EA88DF6068E5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Runtime\MCP">
+      <UniqueIdentifier>{41A58E11-AE8E-4FC7-8E66-D5093C65F621}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="assets\item_catalog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="assets\item_database_export.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="external\imgui\imgui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="external\imgui\imgui_draw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="external\imgui\imgui_impl_dx11.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="external\imgui\imgui_impl_dx12.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="external\imgui\imgui_impl_win32.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="external\imgui\imgui_stdlib.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="external\imgui\imgui_tables.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="external\imgui\imgui_widgets.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="game\customization\outfit_controller.cpp">
+      <Filter>Source Files\Game\Customization</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\buddy\clawd_companion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\dxhook\dxhook.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\media\media_widget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\menu\menu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\webview\tarkov_map_webview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hooks\hooks.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="module\item_factory_catalog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="module\impl\OutfitModule.cpp">
+      <Filter>Source Files\Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="runtime\mcp\inspector_support.cpp">
+      <Filter>Source Files\Runtime\MCP</Filter>
+    </ClCompile>
+    <ClCompile Include="runtime\mcp\memory_commands.cpp">
+      <Filter>Source Files\Runtime\MCP</Filter>
+    </ClCompile>
+    <ClCompile Include="runtime\mcp\metadata_commands.cpp">
+      <Filter>Source Files\Runtime\MCP</Filter>
+    </ClCompile>
+    <ClCompile Include="runtime\mcp\runtime_bridge.cpp">
+      <Filter>Source Files\Runtime\MCP</Filter>
+    </ClCompile>
+    <ClCompile Include="runtime\mcp\runtime_inspector.cpp">
+      <Filter>Source Files\Runtime\MCP</Filter>
+    </ClCompile>
+    <ClCompile Include="runtime\mcp\unity_commands.cpp">
+      <Filter>Source Files\Runtime\MCP</Filter>
+    </ClCompile>
+    <ClCompile Include="util\logger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\stb\stb_image_impl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="assets\item_catalog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="assets\item_database.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="assets\item_database_export.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="assets\weapon_finish_assets.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="config\ActionRowValue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="config\CheckboxValue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="config\ColorpickerValue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="config\ConfigValue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="config\FavoritesValue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="config\FloatSliderValue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="config\IntSliderValue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="config\IntTextboxValue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="config\ItemSearchValue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="config\SelectValue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="config\TextboxValue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="external\detours\detours.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="external\detours\detver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="external\imgui\imconfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="external\imgui\imgui.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="external\imgui\imgui_impl_dx11.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="external\imgui\imgui_impl_dx12.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="external\imgui\imgui_impl_win32.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="external\imgui\imgui_internal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="external\imgui\imgui_stdlib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="external\imgui\imstb_rectpack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="external\imgui\imstb_textedit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="external\imgui\imstb_truetype.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="game\customization\outfit_controller.h">
+      <Filter>Header Files\Game\Customization</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\buddy\clawd_companion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\dxhook\dxhook.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\media\media_widget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\menu\imgui_addons.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\menu\menu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\menu\resources.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\webview\tarkov_map_webview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hooks\hooks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="il2cpp\exports.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="il2cpp\Il2CppObjectInstance.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="il2cpp\il2cpp_offsets.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="il2cpp\il2utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="il2cpp\runtime_discovery.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="il2cpp\libil2cpp\il2cpp-api-types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="il2cpp\libil2cpp\il2cpp-blob.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="il2cpp\libil2cpp\il2cpp-class-internals.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="il2cpp\libil2cpp\il2cpp-metadata.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="il2cpp\libil2cpp\il2cpp-object-internals.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="il2cpp\libil2cpp\il2cpp-runtime-metadata.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="il2cpp\unity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="module\always_on.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="module\common_hooks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="module\game_state.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="module\impl\AssetDiscoveryModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="module\impl\ConfigModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="module\impl\CustomizationDiscoveryModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="module\impl\HideoutModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="module\impl\EntityVisualizerModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="module\impl\ItemModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="module\impl\MapModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="module\impl\OutfitModule.h">
+      <Filter>Header Files\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="module\impl\PlayerModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="module\impl\QuestModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="module\impl\WatermarkModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="module\impl\WeatherModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="module\impl\WeaponModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="module\impl\WorldVisualizerModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="module\item_factory_catalog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="module\Module.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="module\ModuleCategory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="module\ModuleManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="runtime\mcp\inspector_support.h">
+      <Filter>Header Files\Runtime\MCP</Filter>
+    </ClInclude>
+    <ClInclude Include="runtime\mcp\memory_commands.h">
+      <Filter>Header Files\Runtime\MCP</Filter>
+    </ClInclude>
+    <ClInclude Include="runtime\mcp\metadata_commands.h">
+      <Filter>Header Files\Runtime\MCP</Filter>
+    </ClInclude>
+    <ClInclude Include="runtime\mcp\protocol.h">
+      <Filter>Header Files\Runtime\MCP</Filter>
+    </ClInclude>
+    <ClInclude Include="runtime\mcp\runtime_bridge.h">
+      <Filter>Header Files\Runtime\MCP</Filter>
+    </ClInclude>
+    <ClInclude Include="runtime\mcp\runtime_inspector.h">
+      <Filter>Header Files\Runtime\MCP</Filter>
+    </ClInclude>
+    <ClInclude Include="runtime\mcp\unity_commands.h">
+      <Filter>Header Files\Runtime\MCP</Filter>
+    </ClInclude>
+    <ClInclude Include="util\globals.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="util\hash.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="util\logger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="util\scan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="util\utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\stb\stb_image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\gif\clawd-mini-idle.gif">
+      <Filter>Assets</Filter>
+    </Content>
+  </ItemGroup>
+</Project>
